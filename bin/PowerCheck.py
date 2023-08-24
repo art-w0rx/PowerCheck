@@ -56,14 +56,20 @@ def start_power_off():
     window_configure_power_off()
     window_power_off.update()
     time.sleep(1.5)
-    window_power_off.destroy()
+    try:
+        window_power_off.destroy()
+    except:
+        update()
     update()  
     
 def start_power_on():
     window_configure_power_on()
     window_power_on.update()
     time.sleep(1.5)
-    window_power_on.destroy()
+    try:
+        window_power_on.destroy()
+    except:
+        update()
     update()  
 
 def pause_start():
